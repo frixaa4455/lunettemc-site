@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunette MC - Official Server</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+
+<body>
+  <header>
+    <img src="lunette-logo.png" alt="Lunette MC Logo" class="logo" />
+    <h1>Welcome to Lunette MC</h1>
+    <div class="ip-box">
+      IP: <strong id="server-ip">play.lunettemc.com</strong>
+      <button onclick="copyIP()" class="copy-btn">📋 Copy</button>
+    </div>
+    <div id="server-status" class="status-box">Checking server status...</div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Server</h2>
+      <p>
+        Lunette MC is a medieval-themed survival server with cool mods, cheap ranks, and an engaging pay-to-win system. Hosted from Oman for Pakistani players, it's the perfect place to explore, build, and conquer with friends!
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>🛡️ Survival Gameplay</li>
+        <li>🏠 Medieval Theme</li>
+        <li>📦 Cool Mods & Custom Items</li>
+        <li>💰 Cheap Ranks (Pay-to-Win)</li>
+        <li>🎮 Pakistani-Based, Hosted in Oman</li>
+        <li>🏗️ Currently Hiring Builders</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Join the Community</h2>
+      <a href="https://discord.gg/gGMsfTcj" target="_blank" class="btn">Join Our Discord</a>
+      <a href="https://www.lunettemc.com" target="_blank" class="btn">Visit Website</a>
+
+      <div class="discord-widget">
+        <iframe src="https://discord.com/widget?id=YOUR_DISCORD_SERVER_ID&theme=dark"
+          width="350" height="500" allowtransparency="true" frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+      </div>
+    </section>
+    <a href="https://discord.gg/gGMsfTcj" class="discord-btn glow" target="_blank">
+  💬 Join Our Discord
+</a>
+    <section id="coinshop">
+      <h2>🪙 The CoinShop</h2>
+      <p class="coin-intro">
+        Welcome to the heart of Lunette MC's economy. Coins are a powerful in-game currency you can earn by simply playing and enjoying the server.
+      </p>
+
+      <div class="coin-features">
+        <div class="coin-box">
+          <h3>💰 How to Earn Coins</h3>
+          <ul>
+            <li>💤 Stay AFK in special zones</li>
+            <li>🏆 Win chat minigames</li>
+            <li>🗨️ Be active in the server chat</li>
+            <li>🛒 Or purchase large amounts at very low prices</li>
+          </ul>
+        </div>
+
+        <div class="coin-box">
+          <h3>🛍️ What You Can Buy</h3>
+          <ul>
+            <li>🐾 <strong>Unkillable Pets</strong> — Loyal companions that protect you</li>
+            <li>🎯 <strong>Projectile Particles</strong> — Shoot with stylish trails</li>
+            <li>✨ <strong>Cosmetic Particles</strong> — Trail effects, auras, and more</li>
+            <li>💠 <strong>Tool Skins</strong> — Customize tools with rare skins</li>
+            <li>🏖️ <strong>Land Claims</strong> — Protect your builds from griefers</li>
+            <li>👑 <strong>Premium Ranks</strong> — Unlock VIP perks and commands</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="ranks">
+      <h2>👑 Premium Ranks</h2>
+      <p class="rank-intro">
+        Unlock powerful perks, cosmetics, and server-wide respect by purchasing one of our premium ranks. Start your journey from Knight to the mighty King!
+      </p>
+
+      <div class="rank-table">
+        <div class="rank-box knight">
+          <h3>⚔️ Knight</h3>
+          <p class="price">PKR 500 / ~$1.80 USD</p>
+          <ul>
+            <li>✔ Basic perks & kits</li>
+            <li>✔ Colored name</li>
+            <li>✔ Access to /nick</li>
+          </ul>
+        </div>
+
+        <div class="rank-box lord">
+          <h3>🛡️ Lord</h3>
+          <p class="price">PKR 1000 / ~$3.60 USD</p>
+          <ul>
+            <li>✔ All Knight perks</li>
+            <li>✔ Extra homes</li>
+            <li>✔ Custom chat tag</li>
+          </ul>
+        </div>
+
+        <div class="rank-box paladin">
+          <h3>⚜️ Paladin</h3>
+          <p class="price">PKR 1800 / ~$6.50 USD</p>
+          <ul>
+            <li>✔ All Lord perks</li>
+            <li>✔ Access to exclusive area</li>
+            <li>✔ Boosted AFK coin rate</li>
+          </ul>
+        </div>
+
+        <div class="rank-box duke">
+          <h3>🏠 Duke</h3>
+          <p class="price">PKR 2500 / ~$9.00 USD</p>
+          <ul>
+            <li>✔ All Paladin perks</li>
+            <li>✔ Special rank particle</li>
+            <li>✔ Auction item highlight</li>
+          </ul>
+        </div>
+
+        <div class="rank-box king">
+          <h3>👑 King</h3>
+          <p class="price">PKR 3500 / ~$12.50 USD</p>
+          <ul>
+            <li>✔ All Duke perks</li>
+            <li>✔ Invincible pets</li>
+            <li>✔ Staff-like powers (limited)</li>
+            <li>✔ Access to KING-only tools and areas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Lunette MC. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function copyIP() {
+      const ip = document.getElementById("server-ip").textContent;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert("✅ IP copied: " + ip);
+      });
+    }
+
+    async function checkServerStatus() {
+      const statusBox = document.getElementById("server-status");
+      try {
+        const res = await fetch("https://api.mcsrvstat.us/2/play.lunettemc.com");
+        const data = await res.json();
+
+        if (data.online) {
+          statusBox.innerHTML = `✅ <strong>Online</strong> - ${data.players.online} Players Playing`;
+          statusBox.style.backgroundColor = "#d4edda";
+          statusBox.style.color = "#155724";
+          statusBox.style.border = "2px solid #28a745";
+        } else {
+          statusBox.innerHTML = "❌ <strong>Offline</strong> - Server not reachable";
+          statusBox.style.backgroundColor = "#f8d7da";
+          statusBox.style.color = "#721c24";
+          statusBox.style.border = "2px solid #dc3545";
+        }
+      } catch (error) {
+        statusBox.innerHTML = "⚠️ Could not check server status";
+        statusBox.style.backgroundColor = "#fff3cd";
+        statusBox.style.color = "#856404";
+        statusBox.style.border = "2px solid #ffc107";
+      }
+    }
+
+    checkServerStatus();
+    setInterval(checkServerStatus, 30000);
+  </script>
+
+  <!-- Background & Cursor Particles -->
+  <canvas id="particles-canvas"></canvas>
+  <script>
+    const canvas = document.getElementById("particles-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.style.position = "fixed";
+    canvas.style.top = 0;
+    canvas.style.left = 0;
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "-1";
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const bgParticles = [];
+    function createParticle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speed: Math.random() * 1 + 0.5,
+        color: "#ffffff"
+      };
+    }
+
+    for (let i = 0; i < 100; i++) {
+      bgParticles.push(createParticle());
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of bgParticles) {
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        p.y += p.speed;
+        if (p.y > canvas.height) {
+          p.y = -p.size;
+          p.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+  </script>
+
+  <canvas id="cursor-trail"></canvas>
+  <script>
+    const trailCanvas = document.getElementById("cursor-trail");
+    const trailCtx = trailCanvas.getContext("2d");
+    trailCanvas.width = window.innerWidth;
+    trailCanvas.height = window.innerHeight;
+    trailCanvas.style.position = "fixed";
+    trailCanvas.style.pointerEvents = "none";
+    trailCanvas.style.top = 0;
+    trailCanvas.style.left = 0;
+    trailCanvas.style.zIndex = "9999";
+
+    const cursorParticles = [];
+
+    document.addEventListener("mousemove", (e) => {
+      cursorParticles.push({
+        x: e.clientX,
+        y: e.clientY,
+        size: Math.random() * 4 + 1,
+        life: 50,
+        color: `hsl(${Math.random() * 360}, 100%, 70%)`
+      });
+    });
+
+    function drawTrail() {
+      trailCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height);
+      for (let i = 0; i < cursorParticles.length; i++) {
+        const p = cursorParticles[i];
+        trailCtx.fillStyle = p.color;
+        trailCtx.beginPath();
+        trailCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        trailCtx.fill();
+        p.life--;
+        p.size *= 0.96;
+        if (p.life <= 0) {
+          cursorParticles.splice(i, 1);
+          i--;
+        }
+      }
+      requestAnimationFrame(drawTrail);
+    }
+
+    drawTrail();
+  </script>
+  <section id="crates">
+  <h2>🎁 Crate Rewards</h2>
+  <p class="crate-intro">Open crates to receive valuable rewards! You can earn keys through gameplay or purchase them in the store.</p>
+
+  <div class="crate-gallery">
+    <!-- Vote Crate -->
+    <div class="crate-box">
+      <img src="vote-crate.png" alt="Vote Crate" />
+      <h3>🗳️ Vote Crate</h3>
+      <p>Earned by voting for the server daily. Contains basic to mid-tier rewards including money, ores, and tools.</p>
+    </div>
+
+    <!-- Common Crate -->
+    <div class="crate-box">
+      <img src="common-crate.png" alt="Common Crate" />
+      <h3>📦 Common Crate</h3>
+      <p>Contains better rewards than vote crates, including rare ores, money, enchant bottles, and tools.</p>
+    </div>
+
+    <!-- Rare Crate -->
+    <div class="crate-box">
+      <img src="rare-crate.png" alt="Rare Crate" />
+      <h3>💎 Rare Crate</h3>
+      <p>Top-tier crate with the most powerful and expensive items: diamonds, tools, tridents, money, and rare keys.</p>
+    </div>
+
+    <!-- Epic Crate -->
+    <div class="crate-box">
+      <img src="epic-crate.png" alt="Epic Crate" />
+      <h3>🔥 Epic Crate</h3>
+      <p>Contains legendary tools, large amounts of money, exclusive particle effects, and rare enchant books.</p>
+    </div>
+
+    <!-- Superior Crate -->
+    <div class="crate-box">
+      <img src="superior-crate.png" alt="Superior Crate" />
+      <h3>🌟 Superior Crate</h3>
+      <p>Our most powerful crate, includes everything from all crates plus ultra-rare items and rank keys!</p>
+    </div>
+  </div> <!-- END .crate-gallery -->
+</section>
+<section id="spawn-gallery">
+  <h2>🏰 Server Spawn Area</h2>
+  <p>Take a look at some beautiful shots from our spawn area!</p>
+
+  <div class="spawn-images">
+    <img src="spawn1.png" alt="Spawn View 1" />
+    <img src="spawn2.png" alt="Spawn View 2" />
+    <img src="spawn3.png" alt="Spawn View 3" />
+  </div>
+</section>
+<section id="arena-pvp">
+  <h2>⚔️ Arena PvP Zone</h2>
+  <p>Step into the intense PvP arena where only the strongest survive. Challenge your friends or foes in this epic battleground!</p>
+
+  <div class="arena-image">
+    <img src="arena-pvp.png" alt="Arena PvP" />
+  </div>
+</section>
+<section id="server-builds">
+  <h2>🏗️ Server Builds</h2>
+  <p>Check out some amazing builds crafted by our talented community!</p>
+
+  <div class="builds-gallery">
+    <img src="build1.png" alt="Build Showcase 1" />
+    <img src="build2.png" alt="Build Showcase 2" />
+  </div>
+</section>
+<section id="credits">
+  <h2>✨ Server Creator</h2>
+  <p><span class="highlighted-player">Created with passion by player <strong>Frixaa4455</strong> 💙</span></p>
+</section>
+</body>
+</html>
+
+
